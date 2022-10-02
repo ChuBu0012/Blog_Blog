@@ -1,0 +1,16 @@
+@media (min-width:320px) and (max-width:375px) {
+    #title{
+        width: 56%;
+    }
+    #password{
+        width: 56%;
+    }
+}
+@media (min-width:375px) and (max-width:425px) {
+    #title{
+        width:11.9rem;
+    }
+    #password{
+        width: 11.9rem;
+    }
+}
