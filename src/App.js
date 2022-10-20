@@ -52,14 +52,15 @@ function App() {
       });
   };
 
+  const optionDate = { dateStyle: "medium", timeStyle: "short" };
   return (
     <div className=" container m-auto">
       <Navbar />
       <div className="mt-5 flex flex-col-reverse">
         {Allblogs.map((blog, index) => {
           let dividingline = "<div class='my-10'></div>";
-          if(index !== 0){
-            dividingline = "<hr className='my-7'/>"
+          if (index !== 0) {
+            dividingline = "<hr className='my-7'/>";
           }
           return (
             <div className="" key={index}>
@@ -81,7 +82,7 @@ function App() {
                 <h2 className="text-sm md:text-base xl:text-lg mt-3 opacity-60  text-zinc-900">
                   ผู้เขียน: {blog.author}
                   <br />
-                  เขียนเมื่อ: {new Date(blog.updatedAt).toLocaleString()}
+                  เขียนเมื่อ: {new Date(blog.updatedAt).toLocaleString('th-TH',optionDate)}
                 </h2>
                 {getusername() && (
                   <div className="mt-3">
@@ -99,7 +100,7 @@ function App() {
                     </button>
                   </div>
                 )}
-              {parse(dividingline)}
+                {parse(dividingline)}
               </div>
             </div>
           );
